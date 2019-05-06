@@ -1,5 +1,5 @@
 <template>
-    <h1>Carte des fournisseurs</h1>
+    <h1 id="map">Carte des fournisseurs</h1>
 </template>
 
 <script>

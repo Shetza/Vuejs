@@ -1,5 +1,5 @@
 <template>
-    <h1>Liste des fournisseurs</h1>
+    <h1 id="fournisseurs">Liste des fournisseurs</h1>
 </template>
 
 <script>
