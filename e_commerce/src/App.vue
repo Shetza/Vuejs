@@ -10,7 +10,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col mb-5">
-                    <router-link to="/fournisseurs" ><button class="btn btn-outline-success " v-on:click="onSuppliersListClick">Consulter la liste des
+                    <router-link to="/suppliers" ><button class="btn btn-outline-success " v-on:click="onSuppliersListClick">Consulter la liste des
                         fournisseurs
                     </button>   </router-link>
                     <router-link to="/map" ><button class="btn btn-outline-success ml-5" v-on:click="onMapClick">Voir la carte</button></router-link>
@@ -23,17 +23,17 @@
 
 <script>
     //import HelloWorld from './components/HelloWorld.vue'
-    import supplierList from './components/supplierList.vue'
-    import onMapClick from './components/onMapClick'
-    import supplier from './components/supplier.vue'
+    import SuppliersList from './components/SuppliersList.vue'
+    import OnMapClick from './components/OnMapClick'
+    import Supplier from './components/Supplier.vue'
 
     export default {
         name: 'app',
         components: {
             //HelloWorld,
-            supplierList,
-            onMapClick,
-            supplier
+            SuppliersList,
+            OnMapClick,
+            Supplier
         },
         methods: {
             onSuppliersListClick: function () {

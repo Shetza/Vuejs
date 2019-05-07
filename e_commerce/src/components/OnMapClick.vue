@@ -1,10 +1,10 @@
 <template>
-    <h1 id="fournisseurs">Liste des fournisseurs</h1>
+    <h1 id="map">Carte des fournisseurs</h1>
 </template>
 
 <script>
     export default {
-        name: "supplierList"
+        name: "OnMapClick"
     }
 </script>
 

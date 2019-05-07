@@ -1,3 +1,3 @@
-import SupplierList from "../src/components/supplierList";
-import onMapClick from "../src/components/onMapClick";
+import SupplierList from "../src/components/SuppliersList";
+import onMapClick from "../src/components/OnMapClick";
 
