@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1 id="fournisseurs">Liste des fournisseurs</h1>
-        <Supplier :name=name :status=status :checked-at=checkedAt /> <!--  :name -> props    =name->variable-->
+        <h1>Liste des fournisseurs</h1>
+        <Supplier v-for="item in suppliers" v-bind:name=item.name v-bind:status=item.status v-bind:checkedAt=item.checkedAt /><!--  :name -> props    =name->variable-->
     </div>
 </template>
 
@@ -13,11 +13,23 @@
         components:{
             Supplier
         },
-        data: function () {
+        data() {
             return {
-                name: 'Supplier',
-                status: true,// est ce qu'il y a du stock
-                checkedAt: new Date().toLocaleString(),// date de la dernière mise à jour du stock
+                suppliers: [
+                    {
+                        id: 1,
+                        name: "Fournisseur 1",
+                        status: true,
+                        checkedAt: new Date().toLocaleString()
+                    },
+                    {
+                        id: 2,
+                        name: "Fournisseur 2",
+                        status: false,
+                        checkedAt: new Date().toLocaleString()
+                    }
+
+                ]
             }
         }
 
@@ -27,3 +39,4 @@
 <style scoped>
 
 </style>
+

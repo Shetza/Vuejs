@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <h1>{{name}}</h1>
-        <h3 v-if="status" class="text-success">A du stock ? OK</h3>
-        <h3 v-else class="text-danger">A du stock ? KO</h3>
-        <h5>Date de dernier relevé des stocks : {{checkedAt}}</h5>
+    <div class="container border border-dark mt-4 ">
+        <h2>{{name}}</h2>
+        <h4 v-if="status" class="text-success">A du stock ? OK</h4>
+        <h4 v-else class="text-danger">A du stock ? KO</h4>
+        <h6>Date de dernier relevé des stocks : {{checkedAt}}</h6>
     </div>
 </template>
 
