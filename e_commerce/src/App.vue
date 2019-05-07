@@ -23,15 +23,17 @@
 
 <script>
     //import HelloWorld from './components/HelloWorld.vue'
-    import SupplierList from './components/SupplierList.vue'
+    import supplierList from './components/supplierList.vue'
     import onMapClick from './components/onMapClick'
+    import supplier from './components/supplier.vue'
 
     export default {
         name: 'app',
         components: {
             //HelloWorld,
-            SupplierList,
-            onMapClick
+            supplierList,
+            onMapClick,
+            supplier
         },
         methods: {
             onSuppliersListClick: function () {
