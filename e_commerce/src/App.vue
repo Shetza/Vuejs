@@ -10,10 +10,13 @@
             </div>
             <div class="row mt-5">
                 <div class="col mb-5">
-                    <router-link to="/suppliers" ><button class="btn btn-outline-success " v-on:click="onSuppliersListClick">Suppliers List
-
-                    </button>   </router-link>
-                    <router-link to="/map" ><button class="btn btn-outline-success ml-5" v-on:click="onMapClick">Map</button></router-link>
+                    <router-link to="/suppliers">
+                        <button class="btn btn-outline-success " v-on:click="onSuppliersListClick">Suppliers List
+                        </button>
+                    </router-link>
+                    <router-link to="/map">
+                        <button class="btn btn-outline-success ml-5" v-on:click="onMapClick">Suppliers Map</button>
+                    </router-link>
                 </div>
             </div>
             <router-view></router-view>
