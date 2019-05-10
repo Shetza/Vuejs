@@ -29,6 +29,7 @@
     import SuppliersList from './components/SuppliersList.vue'
     import OnMapClick from './components/OnMapClick'
     import Supplier from './components/Supplier.vue'
+    import Map from './components/Map.vue'
 
     export default {
         name: 'app',
@@ -36,7 +37,8 @@
             //HelloWorld,
             SuppliersList,
             OnMapClick,
-            Supplier
+            Supplier,
+            Map
         },
         methods: {
             onSuppliersListClick: function () {
