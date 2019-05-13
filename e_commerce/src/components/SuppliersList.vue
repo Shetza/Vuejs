@@ -1,35 +1,49 @@
 <template>
     <div>
         <h1>Liste des fournisseurs</h1>
-        <Supplier v-for="item in suppliers" v-bind:name=item.name v-bind:status=item.status v-bind:checkedAt=item.checkedAt /><!--  :name -> props    =name->variable-->
+        <section v-if="errored">
+            <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+        </section>
+        <section v-else>
+            <div v-if="loading">Loading...</div>
+
+           <Supplier class="supplier" v-else v-for="supplier in suppliers" v-bind:key=supplier.id v-bind:name=supplier.name
+                                     v-bind:status=supplier.status v-bind:checked-at="myformat(supplier.checkedAt)" /> <!--  :name -> props    =name->variable-->
+        </section>
     </div>
 </template>
 
 <script>
     import Supplier from './Supplier.vue'
-    import {format, render, cancel, register} from 'timeago.js'; // import du package timeago
+    import axios from 'axios'
+    import { format } from 'timeago.js'; // import du package timeago
 
     export default {
         name: "SuppliersList",
         components: {
             Supplier
         },
-        data: function () {
-            return {
-                suppliers: [
-                    {
-                        id: 1,
-                        name: "Fournisseur 1",
-                        status: true,
-                        checkedAt: format(new Date(), 'en_US', '2019-05-05')
-                    },
-                    {
-                        id: 2,
-                        name: "Fournisseur 2",
-                        status: false,
-                        checkedAt: format(new Date(), 'fr_FR', '2019-05-05')
-                    }
-                ]
+        data(){
+            return{
+                suppliers:[],
+                loading: true,
+                errored: false,
+            }
+        },
+        mounted () {
+            axios.get('https://api-suppliers.herokuapp.com/api/suppliers')
+                .then(response => {
+                    this.suppliers = response.data
+                })
+                .catch(error => {
+                    console.log(error);
+                    this.errored = true;
+                })
+                .finally(() => this.loading = false)
+        },
+        methods: {
+            myformat: function (date) {
+                return format(date, 'en_US');
             }
         }
     }

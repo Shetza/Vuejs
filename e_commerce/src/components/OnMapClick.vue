@@ -13,26 +13,6 @@
         components:{
             Map
         },
-        data: function () {
-            return {
-                suppliers: [
-                    {
-                        id: 1,
-                        position: {
-                            latitude: 10,
-                            longitude: 10
-                        }
-                    },
-                    {
-                        id: 2,
-                        position: {
-                            latitude: 11,
-                            longitude: 9.6
-                        }
-                    }
-                ]
-            }
-        },
     }
 </script>
 

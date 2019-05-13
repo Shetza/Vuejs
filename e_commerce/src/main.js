@@ -7,7 +7,6 @@ import Supplier from './components/Supplier.vue'
 import Map from './components/Map.vue'
 
 import * as VueGoogleMaps from 'vue2-google-maps'
-
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyAo2Mee8B75RkEXftEAeYVwQByvQ2CXK08',
@@ -16,7 +15,6 @@ Vue.use(VueGoogleMaps, {
 })
 
 import VueRouter from 'vue-router'
-
 Vue.use(VueRouter)
 
 const router = new VueRouter({
