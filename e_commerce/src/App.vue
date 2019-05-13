@@ -11,11 +11,11 @@
             <div class="row mt-5">
                 <div class="col mb-5">
                     <router-link to="/suppliers">
-                        <button class="btn btn-outline-success " v-on:click="onSuppliersListClick">Suppliers List
+                        <button class="btn btn-outline-success ">Suppliers List
                         </button>
                     </router-link>
                     <router-link to="/map">
-                        <button class="btn btn-outline-success ml-5" v-on:click="onMapClick">Suppliers Map</button>
+                        <button class="btn btn-outline-success ml-5">Suppliers Map</button>
                     </router-link>
                 </div>
             </div>
@@ -26,26 +26,11 @@
 
 <script>
     //import HelloWorld from './components/HelloWorld.vue'
-    import SuppliersList from './components/SuppliersList.vue'
-    import OnMapClick from './components/OnMapClick'
-    import Supplier from './components/Supplier.vue'
-    import Map from './components/Map.vue'
-
     export default {
         name: 'app',
         components: {
             //HelloWorld,
-            SuppliersList,
-            OnMapClick,
-            Supplier,
-            Map
         },
-        methods: {
-            onSuppliersListClick: function () {
-            },
-            onMapClick: function () {
-            }
-        }
     }
 </script>
 

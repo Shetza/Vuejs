@@ -28,6 +28,8 @@
                 suppliers:[],
                 loading: true,
                 errored: false,
+                latitude: Number,
+                longitude: Number
             }
         },
         mounted () {

@@ -14,7 +14,7 @@
             name: String,
             id: Number,
             status: Boolean,
-            checkedAt:String
+            checkedAt:String,
         }
     }
 
