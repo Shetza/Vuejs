@@ -14,6 +14,7 @@ Vue.use(VueGoogleMaps, {
 })
 
 import VueRouter from 'vue-router'
+import './registerServiceWorker'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
